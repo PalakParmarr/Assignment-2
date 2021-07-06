@@ -1,18 +1,20 @@
 from implementation.fibonacci import fibonacci
 from implementation.primenumber import primenumber
 from implementation.amstrong import amstrong
-print("1: fibonacci \n2: primenumber\n3: amstrong")
-  
-choise = int(input("Enter your choise"))
-  
-if choise == 1:
+try:
+    print("1: fibonacci \n2: primenumber\n3: amstrong")
+    choice = int(input("Enter your choice"))
+    while choice not in range(1,4):
+        print("incorrect choice\n")
+        print("1: fibonacci \n2: primenumber\n3: amstrong")
+        choice = int(input("enter your choice"))
+
+    if choice == 1:
+        f=fibonacci().run()
+    elif choice == 2:
+       p=primenumber().run()
+    elif choice == 3:
+        a=amstrong().run()
     
-    f=fibonacci().run()
-elif choise == 2:
-    
-    p=primenumber().run()
-elif choise == 3:
-    
-    a=amstrong().run()
-else:
-    print("incorrect")
+except Exception as ex:
+    print("incorrect choice" ,ex)

@@ -1,12 +1,16 @@
 from base import baserun
 class amstrong(baserun):
     def run(self):
-         if self.n < 0:
-            print("Incorrect input")
-         elif self.n == 0:
-            return 0
-         elif self.n == 1 or self.n == 2:
-            return 1
-         else:
-            return run(self.n-1) + run(self.n-2)
-    
+      self.n=int(input("enter number"))
+ 
+      sum = 0  
+      t = self.n 
+
+      while t > 0:  
+         sum = sum+((t % 10) ** 3)   
+         t //= 10  
+
+      if self.n == sum:  
+         print(self.n,"is an Armstrong number")  
+      else:  
+         print(self.n,"is not an Armstrong number")  
