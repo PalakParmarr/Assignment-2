@@ -6,7 +6,6 @@ class fibonacci(baserun):
         self.n= int(input("enter a number"))
         a = 0
         b = 1
-        
         if self.n == 0:
             print(0)
         elif self.n == 1:

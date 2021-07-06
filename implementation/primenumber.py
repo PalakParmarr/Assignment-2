@@ -9,8 +9,6 @@ class primenumber(baserun):
             print(self.n, "is a prime number")
         else:
             for i in range(1, int(float(self.n/2)+1)):
-                # If num is divisible by any number between
-                # 2 and n / 2, it is not prime
                 if (self.n % i) != 0:
                     print(self.n, "is not a prime number")
                     break
